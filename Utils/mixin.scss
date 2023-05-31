@@ -1,0 +1,9 @@
+@mixin box-shadow($color){
+    -webkit-box-shadow: 10px 10px 15px -4px $color;
+    -moz-box-shadow: 10px 10px 15px -4px $color;
+    box-shadow: 10px 10px 15px -4px $color;
+}
+
+@mixin font-stack {
+    font: 100% "Space Mono", monospace;
+}

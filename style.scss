@@ -1,0 +1,113 @@
+@import 'Utils/variables.scss';
+@import 'Utils/mixin.scss';
+
+*{
+    padding: $padding;
+}
+
+body {
+    @include font-stack;
+    color: $shadow-color;
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 0 1em;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+
+    & section {
+        flex-grow: 1;
+        flex-basis: 45%;
+        border: 1px $border-color solid;
+        @include box-shadow($shadow-color);
+        padding: 16px;
+        margin: 16px;
+        clear: both;
+        overflow: auto;
+        box-sizing: border-box;
+    
+        &#selling-points {
+            flex-grow: 2;
+            flex-basis: 100%;
+        }
+    }
+
+    & code {
+        background: $article-background-color;
+        border: 1px solid $shadow-color;
+        color: $border-color;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+    
+        &.before {
+            float: left;
+            width: 40%;
+        }
+        &.after {
+            float: right;
+            width: 40%;
+        }
+    }
+}
+
+h1,
+h2,
+h3 {
+    color: $heading-color;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: $padding*2;
+    margin-bottom: 0px;
+}
+
+// Extend to message 
+.extend {
+    border: 1px solid $border-color;
+    padding: 16px;
+    color: $background-color;
+}
+
+.messages {
+    padding: 16px;
+
+    .success {
+        background-color: $succes-background-color;
+        @extend .extend;
+    }
+
+    .error {
+        background-color: $error-background-color;
+        @extend .extend;
+        
+        &:hover {
+            background-color: green;
+        }
+    }
+
+    .warning {
+        background-color: $warning-background-color;
+        @extend .extend;
+    }
+}
