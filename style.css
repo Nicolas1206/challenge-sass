@@ -15,6 +15,31 @@ main {
   padding: 0 1em;
 }
 
+.advantages li:nth-child(1) {
+  color: #33ffff;
+  background-color: #5f6571;
+}
+.advantages li:nth-child(2) {
+  color: #66ffff;
+  background-color: #545863;
+}
+.advantages li:nth-child(3) {
+  color: #99ffff;
+  background-color: #484c55;
+}
+.advantages li:nth-child(4) {
+  color: #ccffff;
+  background-color: #3c4048;
+}
+.advantages li:nth-child(5) {
+  color: white;
+  background-color: #31333a;
+}
+.advantages li:nth-child(6) {
+  color: white;
+  background-color: #25272c;
+}
+
 article {
   display: flex;
   flex-wrap: wrap;

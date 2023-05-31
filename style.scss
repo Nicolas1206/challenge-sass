@@ -1,5 +1,4 @@
-@import 'Utils/variables.scss';
-@import 'Utils/mixin.scss';
+@import 'Utils/variables.scss', 'Utils/mixin.scss';
 
 *{
     padding: $padding;
@@ -16,6 +15,16 @@ body {
 
 main {
     padding: 0 1em;
+}
+
+
+.advantages {
+    @for $i from 1 through 6 {
+        li:nth-child(#{$i}){
+            color: lighten($gradient, $i*10%);
+            background-color: darken($gradient-background, $i*5%);
+        }
+    }
 }
 
 article {
